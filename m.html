@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Box Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Container Styles */
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Product Box Styles */
+        .product {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 20px 0;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .product:hover {
+            transform: scale(1.02);
+        }
+
+        /* Image Styles */
+        .product img {
+            width: 100px;
+            height: 100px;
+        }
+        .header img {
+            width: 100%;
+            width: 100%;
+        }
+
+        /* Button Styles */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Happy Fruit Box Delivery</h1>
+    <img src="organic.jpg" alt="Basic Fruit Box">
+    <p>Get the freshest fruits delivered to your doorstep!</p>
+</header>
+
+<div class="container">
+    <h2>Our Fruit Boxes</h2>
+
+    <div class="product">
+        <h3>Basic Fruit Box</h3>
+        <img src="organic.jpg" alt="Basic Fruit Box">
+        <p>A selection of the freshest seasonal fruits.</p>
+        <p>Price: 2199.99</p>
+        <button onclick="orderFruitBox('Basic Fruit Box')">Order Now</button>
+    </div>
+
+    <div class="product">
+        <h3>Gold Fruit Box</h3>
+        <img src="season.jpg" alt="Gold Fruit Box">
+        <p>Enjoy a taste of the tropics with our tropical fruit selection.</p>
+        <p>Price: 2599.99</p>
+        <button onclick="orderFruitBox('Gold Fruit Box')">Order Now</button>
+    </div>
+
+    <div class="product">
+        <h3>Premium Fruit Box</h3>
+        <img src="tropical.jpg" alt="Premium Fruit Box">
+        <p>All organic fruits for a healthy lifestyle.</p>
+        <p>Price: 2999.99</p>
+        <button onclick="orderFruitBox('Premium Fruit Box')">Order Now</button>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Fresh Fruit Box Delivery. All rights reserved.</p>
+</footer>
+
+<script>
+    // Function to handle the order button click
+    function orderFruitBox(boxName) {
+        // Redirect to a confirmation page with the box name as a query parameter
+        window.location.href = "confirmation.html?box=" + encodeURIComponent(boxName);
+    }
+</script>
+</body>
+</html>
+
